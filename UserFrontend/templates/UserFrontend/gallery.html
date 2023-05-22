@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Gallery | Food Waste Management </title>
+
+    {% include 'UserFrontend/styles.html' %}
+</head>
+
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="{% static 'assets/images/loader.png' %}" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        
+        {% include 'UserFrontend/navbar.html' %}
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url({% static 'assets/images/backgrounds/page-header-bg.jpg' %})">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Our Gallery</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'usermodule:home' %}">Home</a></li>
+                        <li>Gallery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Gallery Page Start-->
+        <section class="gallery-page">
+            <div class="container">
+                <div class="row masonary-layout">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-1.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-1.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-2.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-2.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-3.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-3.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-4.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-4.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-5.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-5.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/rom-markt.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/rom-markt.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/gallery-page-6.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/gallery-page-6.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/food-waste-shutterstock-1.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/food-waste-shutterstock-1.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <!--Gallery Page Single-->
+                        <div class="gallery-page__single">
+                            <div class="gallery-page__img">
+                                <img src="{% static 'assets/images/gallery/food-wastage-application.jpg' %}" alt="">
+                                <div class="gallery-page__icon">
+                                    <a class="img-popup" href="{% static 'assets/images/gallery/food-wastage-application.jpg' %}"><span
+                                            class="icon-plus-symbol"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!--Gallery Page End-->
+
+        {% include 'UserFrontend/footer.html' %}
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="{% url 'usermodule:home' %}" aria-label="logo image"><img src="{% static 'assets/images/resources/footer-logo.png' %}"
+                        width="155" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    {% include 'UserFrontend/scripts.html' %}
+</body>
+
+</html>

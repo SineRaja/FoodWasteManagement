@@ -1,0 +1,84 @@
+{% load static %}
+<!--Site Footer Start-->
+<footer class="site-footer">
+    <div class="site-footer-bg" style="background-image: url({% static 'assets/images/backgrounds/site-footer-bg.jpg' %});">
+    </div>
+    <div class="site-footer__top">
+        <div class="container">
+            <div class="site-footer__top-inner">
+                <div class="site-footer__top-logo">
+                    <!-- <a href="{% url 'usermodule:home' %}"><img src="{% static 'assets/images/resources/footer-logo.png' %}" alt=""></a> -->
+                </div>
+                <div class="site-footer__top-right">
+                    <p class="site-footer__top-right-text">Food Waste Management & Pickup Services</p>
+                    <div class="site-footer__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="footer-widget__column footer-widget__about">
+                        <h3 class="footer-widget__title">About</h3>
+                        <div class="footer-widget__about-text-box">
+                            <p class="footer-widget__about-text">We collect the excess/leftover food from donors
+                                 and distribute to the needy people through NGOs.
+                                 NGOs will collect the leftover or excess food from above mentioned venues for the distribution to the needy people.</p>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="footer-widget__column footer-widget__links clearfix">
+                        <h3 class="footer-widget__title">Links</h3>
+                        <ul class="footer-widget__links-list list-unstyled clearfix">
+                            <li><a href="{% url 'usermodule:about_us' %}">About</a></li>
+                            <li><a href="{% url 'usermodule:request_pickup' %}">Request Pickup</a></li>
+                            <li><a href="{% url 'usermodule:gallery' %}">Gallery</a></li>
+                            <li><a href="{% url 'usermodule:contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="footer-widget__column footer-widget__contact clearfix">
+                        <h3 class="footer-widget__title">Contact</h3>
+                        <p class="footer-widget__contact-text">880 Leicester,Le2 1xp, England</p>
+                        <div class="footer-widget__contact-info">
+                            <div class="footer-widget__contact-icon">
+                                <span class="icon-contact"></span>
+                            </div>
+                            <div class="footer-widget__contact-content">
+                                <p class="footer-widget__contact-mail-phone">
+                                    <a href="mailto:needhelp@foodwastemanagement.com"
+                                        class="footer-widget__contact-mail">needhelp@foodwastemanagement.com</a>
+                                    <a href="tel:7989801494" class="footer-widget__contact-phone">+ 91 - 79898 01494</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="site-footer-bottom-shape"
+            style="background-image: url({% static 'assets/images/shapes/site-footer-bottom-shape.png' %});"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site-footer__bottom-inner">
+                        <!-- <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">Layerdrops.com</a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Site Footer End-->

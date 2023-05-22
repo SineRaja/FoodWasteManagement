@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Raise an Issue | Food Waste Management </title>
+
+    {% include 'UserFrontend/styles.html' %}
+</head>
+<script>
+    const request_id = "{{request_id}}"
+</script>
+<body>
+    <div class="preloader">
+        <img class="preloader__image" width="60" src="{% static 'assets/images/loader.png' %}" alt="" />
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        
+        {% include 'UserFrontend/navbar.html' %}
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url({% static 'assets/images/backgrounds/page-header-bg.jpg' %})">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Raise an Issue</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'usermodule:home' %}">Home</a></li>
+                        <li>Raise an Issue</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--Request A Pickup Top Start-->
+        <section class="request-a-pickup-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="request-a-pickup-top__inner">
+                            <h2 class="request-a-pickup-top__title">Issue Request</h2>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <!--Request A Pickup Top End-->
+
+        <!--Request A Pickup Start-->
+        <section class="request-a-pickup">
+            <div class="container">
+                <div class="request-a-pickup__tab-box tabs-box">
+                    <div class="request-a-pickup__tab-content">
+                        <div class="request-a-pickup__tab-content-form-box">
+                            <form method="post" action="#" class="request-a-pickup__tab-content-form">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="request-a-pickup__tab-content-form-left">
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="request-a-pickup__tab-content-input-box">
+                                                        <input type="text" placeholder="First Name" name="first_name" id="first_name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="request-a-pickup__tab-content-input-box">
+                                                        <input type="text" placeholder="Last Name" name="last_name" id="last_name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="request-a-pickup__tab-content-input-box">
+                                                        <input type="text" placeholder="Issue title" name="issue_title" id="issue_title">
+                                                        <span id="issue_title_error" style="color: red;"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="request-a-pickup__tab-content-input-box">
+                                                        <select class="selectpicker" aria-label="" name="issue_type" id="issue_type">
+                                                            <option value="" selected disabled>Select Issue Type</option>
+                                                            <option value="Complaint">Complaint</option>
+                                                            <option value="Suggestion">Suggestion </option>
+                                                            <option value="OTHERS">Others</option>
+                                                        </select>
+                                                        <span id="issue_type_error" style="color: red;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="request-a-pickup__tab-content-form-right">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div
+                                                        class="request-a-pickup__tab-content-input-box request-a-pickup__tab-content-brief-box">
+                                                        <textarea placeholder="Issue description" name="issue_desc" id="issue_desc"></textarea>
+                                                        <span id="issue_desc_error" style="color: red;"></span>
+                                                    </div>
+                                                </div>                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="request-a-pickup__tab-content-text-box">Please let us
+                                        know if you think there may be an extras required over the
+                                        allowance guide.</p>
+                                    <br>
+                                    <span id="res_message" style="color: green;"></span>
+                                    <div class="col-xl-12">                                                    
+                                        <div class="request-a-pickup__tab-content-btn-box">
+                                            <button type="button" id="raise-an-issue-btn" class="thm-btn request-a-pickup__tab-content-btn" onclick="return raiseIssue();">Submit an Issue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Request A Pickup End-->
+
+        {% include 'UserFrontend/footer.html' %}
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="{% url 'usermodule:home' %}" aria-label="logo image"><img src="{% static 'assets/images/resources/footer-logo.png"
+                        width="155" alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="{% static 'js/user/raiseIssue.js' %}"></script>
+    {% include 'UserFrontend/scripts.html' %}
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+__pycache__
+.venv
+.idea
+static/build
+static/dist
+static/plugins
+db.sqlite3
+django.core.files.storage.FileSystemStorage
+UITestcases/node_modules
+.coverage
